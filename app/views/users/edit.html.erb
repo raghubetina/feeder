@@ -1,3 +1,7 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
-<%= @user %>
+<%= form_for @user do |f| %>
+<%= f.text_field :email, :placeholder => "Enter your email" %>
+<%= f.password_field :password, :placeholder => "Choose a new password" %>
+<%= f.password_field :password_confirmation, :placeholder => "Re-enter your new password" %>
+<%= f.text_field :name, :placeholder => "Display name" %>
+<%= f.submit "Save Changes" %>
+<% end %>
