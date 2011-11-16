@@ -1,5 +1,8 @@
 Feeder::Application.routes.draw do
+
+
   get "users/new"
+  post "users/create", :controller => "users", :action => "create", :as => "users"
 
   get "users/show"
 
