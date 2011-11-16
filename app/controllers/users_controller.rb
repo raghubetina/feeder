@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
-
+  
+  def home
+    if session[:user_id].present?
+      redirect_to user_url(session[:user_id])
+    else
+      redirect_to new_user_url, :notice => "Please create an account"
+    end
+  end
+  
   def index
     @users = User.all
   end
