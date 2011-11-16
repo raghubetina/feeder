@@ -1,12 +1,6 @@
 Feeder::Application.routes.draw do
 
-
-  get "users/new"
-  post "users/create", :controller => "users", :action => "create", :as => "users"
-
-  get "users/show"
-
-  get "users/edit"
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
